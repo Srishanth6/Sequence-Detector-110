@@ -22,7 +22,7 @@ The waveform confirms that the output `y` becomes HIGH whenever the sequence **1
 - `fsm_diagram.md` - FSM state diagram
 ## State Diagram
 
-![State Diagram](state_diagram.png)
+![State Diagram](state_diagram.png.jpeg)
 
 ## State Transition Table
 
