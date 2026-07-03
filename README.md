@@ -21,5 +21,6 @@ The waveform confirms that the output `y` becomes HIGH whenever the sequence **1
 - `sequence_detector_tb.v` - Testbench
 - `fsm_diagram.md` - FSM state diagram
 
-- ## Simulation Waveform
-- 
+## Simulation Waveform
+
+![Waveform](waveform.png)
