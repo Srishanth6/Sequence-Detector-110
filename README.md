@@ -20,6 +20,13 @@ The waveform confirms that the output `y` becomes HIGH whenever the sequence **1
 - `sequence_detector.v` - Verilog design
 - `sequence_detector_tb.v` - Testbench
 - `fsm_diagram.md` - FSM state diagram
+## State Diagram
+
+![State Diagram](state_diagram.png)
+
+## State Transition Table
+
+![State Transition Table](state_transition_table.png)
 
 ## Simulation Waveform
 
