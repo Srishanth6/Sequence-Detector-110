@@ -10,16 +10,23 @@ This project implements a Moore Finite State Machine (FSM) in Verilog to detect 
 - Simulated using Icarus Verilog
 - Waveform verified using GTKWave
 
-## State Diagram
-See `fsm_diagram.md`.
-
 ## Simulation
 The waveform confirms that the output `y` becomes HIGH whenever the sequence **110** is detected.
 
 ## Files
 - `sequence_detector.v` - Verilog design
 - `sequence_detector_tb.v` - Testbench
-- `fsm_diagram.md` - FSM state diagram
+- `state_diagram.png.jpeg` - FSM state diagram
+- `state_transition_table.png` - State transition table
+- `waveform.png` - Simulation waveform
+
+## How to Simulate
+```sh
+iverilog -o sequence_detector.vvp sequence_detector.v sequence_detector_tb.v
+vvp sequence_detector.vvp      # writes dump.vcd
+gtkwave dump.vcd
+```
+
 ## State Diagram
 
 ![State Diagram](state_diagram.png.jpeg)
