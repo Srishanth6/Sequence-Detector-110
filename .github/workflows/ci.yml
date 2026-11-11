@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  simulate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+          iverilog -V 2>&1 | head -1
+      - name: Run self-checking testbench
+        run: |
+          iverilog -g2012 -o tb_seq rtl/sequence_detector.v tb/sequence_detector_tb.v
+          vvp -n tb_seq | tee sim.log
+          grep -q "RESULT: ALL TESTS PASSED" sim.log
